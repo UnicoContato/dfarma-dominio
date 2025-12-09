@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dfarma - Cuidando de você</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            hover: '#B91C1C',
+                        },
+                        secondary: '#1E3A8A',
+                        accent: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <header id="main-header" class="fixed w-full top-0 z-50 bg-white shadow-md transition-transform duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-secondary tracking-tighter">
+                <span class="text-yellow-500">D</span>FARMA
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="hover:text-primary transition-colors font-medium">Início</a>
+                <a href="#sobre" class="hover:text-primary transition-colors font-medium">Sobre Nós</a>
+                <a href="#servicos" class="hover:text-primary transition-colors font-medium">Serviços</a>
+                <a href="#galeria" class="hover:text-primary transition-colors font-medium">Galeria</a>
+                <a href="#contato" class="hover:text-primary transition-colors font-medium">Contato</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="https://wa.me/551168098516" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition-colors shadow-lg">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>Peça pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-3 px-4 hover:bg-gray-50 border-b">Início</a>
+            <a href="#sobre" class="block py-3 px-4 hover:bg-gray-50 border-b">Sobre Nós</a>
+            <a href="#servicos" class="block py-3 px-4 hover:bg-gray-50 border-b">Serviços</a>
+            <a href="#galeria" class="block py-3 px-4 hover:bg-gray-50 border-b">Galeria</a>
+            <a href="#contato" class="block py-3 px-4 hover:bg-gray-50 border-b">Contato</a>
+            <a href="https://wa.me/551168098516" target="_blank" class="block py-3 px-4 text-green-600 font-bold hover:bg-gray-50">Peça pelo WhatsApp</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="img/4.jpg" alt="Interior da Dfarma" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4 reveal">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight"><span class="text-yellow-500">D</span>FARMA</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">Cuidando de você!</p>
+            <a href="https://wa.me/551168098516" target="_blank" class="inline-block bg-primary hover:bg-primary-hover text-white text-lg font-semibold py-3 px-8 rounded-full transition-transform transform hover:scale-105 shadow-xl">
+                Faça seu Pedido
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl text-center reveal">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-primary inline-block pb-2">Sobre Nós</h2>
+            <div class="text-gray-600 space-y-4 leading-relaxed text-lg">
+                <p>
+                    A DFarma nasceu com um propósito simples: facilitar a vida de quem precisa de cuidado, oferecendo atendimento rápido, humano e acessível. Sabemos que cada pessoa tem uma rotina diferente e, por isso, pensamos em cada detalhe para que nossos clientes encontrem aqui não apenas produtos, mas acolhimento.
+                </p>
+                <p>
+                    Nosso compromisso é entregar qualidade, preço justo e conveniência, com uma seleção completa de medicamentos, fraldas, perfumaria, cuidados pessoais e muito mais. Atendemos com agilidade toda a região de Caieiras, Franco da Rocha e Francisco Morato, com delivery rápido e gratuito, porque entendemos que saúde não pode esperar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 reveal">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center border-t-4 border-primary reveal">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <g fill="currentColor"> <path fill="none" d="M0 0H24V24H0z" /> <path d="M19 2v2h-2v3c1.657 0 3 1.343 3 3v11c0 .552-.448 1-1 1H5c-.552 0-1-.448-1-1V10c0-1.657 1.343-3 3-3V4H5V2h14zm-2 7H7c-.552 0-1 .448-1 1v10h12V10c0-.552-.448-1-1-1zm-4 2v2h2v2h-2.001L13 17h-2l-.001-2H9v-2h2v-2h2zm2-7H9v3h6V4z" /> </g> </svg>
+                    <h3 class="text-xl font-bold mb-3">Medicamentos</h3>
+                    <p class="text-gray-600">Variedade completa de medicamentos de referência, genéricos e similares.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center border-t-4 border-secondary reveal">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-4" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 442 442" xml:space="preserve"> <g> <path d="M231.5,50.5c0-5.79-4.71-10.5-10.5-10.5c-5.79,0-10.5,4.71-10.5,10.5S215.21,61,221,61C226.79,61,231.5,56.29,231.5,50.5z" /> <path d="M346,163.682h-60V122c0-5.522-4.478-10-10-10h-10V10c0-5.523-4.478-10-10-10h-70c-5.523,0-10,4.477-10,10v102h-10 c-5.523,0-10,4.478-10,10v41.682H96c-11.028,0-20,8.972-20,20V422c0,11.028,8.972,20,20,20h250c11.028,0,20-8.972,20-20V183.682 C366,172.653,357.028,163.682,346,163.682z M196,20h50v92h-50V20z M96,422V183.682h70c5.523,0,10-4.477,10-10V132h35v71.682h-85 c-5.523,0-10,4.478-10,10V392c0,5.522,4.477,10,10,10h190c5.522,0,10-4.478,10-10v-60.892c0-5.522-4.478-10-10-10s-10,4.478-10,10 V382H136V223.682h75V352c0,5.522,4.477,10,10,10c5.523,0,10-4.478,10-10V223.682h75V297c0,5.522,4.478,10,10,10s10-4.478,10-10 v-83.318c0-5.522-4.478-10-10-10h-85V132h35v41.682c0,5.523,4.478,10,10,10h70L346.002,422H96z" /> </g> </svg>
+                    <h3 class="text-xl font-bold mb-3">Perfumaria</h3>
+                    <p class="text-gray-600">As melhores marcas de cosméticos, produtos de higiene pessoal e beleza.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center border-t-4 border-accent reveal">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M19 2C19 2 21 3.2 21 6C21 8.8 19 10 19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M17 4C17 4 18 4.6 18 6C18 7.4 17 8 17 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M17.9975 18C18 17.8358 18 17.669 18 17.5C18 15.0147 14.4183 13 10 13C5.58172 13 2 15.0147 2 17.5C2 19.9853 2 22 10 22C12.231 22 13.8398 21.8433 15 21.5634" stroke="currentColor" stroke-width="1.em" stroke-linecap="round"/></svg>
+                    <h3 class="text-xl font-bold mb-3">Atendimento</h3>
+                    <p class="text-gray-600">Farmacêuticos prontos para tirar suas dúvidas com atenção e respeito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 reveal">Conheça nossa Loja</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md h-64 reveal">
+                    <img src="img/1.jpg" alt="Fachada Dfarma" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md h-64 reveal">
+                    <img src="img/3.jpg" alt="Entrada Dfarma" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md h-64 reveal">
+                    <img src="img/2.jpg" alt="Interior Loja" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md h-64 reveal">
+                    <img src="img/5.jpg" alt="Prateleiras" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md h-64 md:col-span-2 reveal">
+                    <img src="img/4.jpg" alt="Visão Geral" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 reveal">Localização e Contato</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white shadow-2xl rounded-2xl overflow-hidden reveal">
+                
+                <div class="p-8 md:p-12 bg-secondary text-white flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-6 text-accent">Informações</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li>
+                            <strong class="block text-gray-300 text-sm">NOME EMPRESARIAL</strong>
+                            DFARMA LTDA
+                        </li>
+                        <li>
+                            <strong class="block text-gray-300 text-sm">CNPJ</strong>
+                            20.083.792/0001-12
+                        </li>
+                        <li>
+                            <strong class="block text-gray-300 text-sm">ENDEREÇO</strong>
+                            Av. Vereador Alfredo Casarotto, 195<br>
+                            Vera Tereza - Caieiras / SP
+                        </li>
+                        <li>
+                            <strong class="block text-gray-300 text-sm">CEP</strong>
+                            07.717-395
+                        </li>
+                        <li>
+                            <strong class="block text-gray-300 text-sm">TELEFONE</strong>
+                            (11) 6809-8516
+                        </li>
+                        <li>
+                            <strong class="block text-gray-300 text-sm">EMAIL</strong>
+                            drogafarma391@gmail.com
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="h-[400px] lg:h-auto w-full">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Av+Vereador+Alfredo+Casarotto+195+Caieiras&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2025 Dfarma. Todos os direitos reservados.</p>
+            <button id="privacy-btn" class="text-gray-400 hover:text-white text-sm underline transition-colors">Política de Privacidade</button>
+        </div>
+    </footer>
+
+    <div id="privacy-modal" class="fixed inset-0 z-[60] bg-black bg-opacity-70 hidden flex items-center justify-center p-4">
+        <div class="bg-white text-gray-800 rounded-xl shadow-2xl max-w-lg w-full p-8 relative overflow-y-auto max-h-[90vh]">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold mb-4">Política de Privacidade</h3>
+            <p class="mb-4 text-sm text-gray-600">
+                Esta Política de Privacidade descreve como a Dfarma coleta, usa e protege as informações que você fornece ao utilizar nosso site.
+            </p>
+            <p class="mb-4 text-sm text-gray-600">
+                <strong>Coleta de Dados:</strong> Este site é institucional e não coleta dados pessoais automaticamente. Quaisquer dados fornecidos voluntariamente via contato direto (WhatsApp ou E-mail) serão utilizados apenas para fins de atendimento.
+            </p>
+            <p class="mb-4 text-sm text-gray-600">
+                <strong>Cookies:</strong> Podemos utilizar cookies básicos para garantir o funcionamento técnico do site e melhorar a experiência do usuário.
+            </p>
+            <p class="text-sm text-gray-600">
+                Para mais informações, entre em contato através dos nossos canais oficiais.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
