@@ -1,0 +1,64 @@
+COMO COLOCAR FOTO NOS PRODUTOS DA LOJA
+======================================
+
+1) Tire/consiga a foto do produto (de preferência FUNDO BRANCO).
+2) Salve dentro desta pasta (img/produtos/) com o NOME EXATO da lista abaixo,
+   sempre em .jpg (minúsculo, sem acento, sem espaço).
+3) Pronto: a foto aparece sozinha na loja, no lugar da ilustração.
+   (Se o arquivo não existir, a loja mostra a ilustração da categoria —
+    nada quebra.)
+
+IMPORTANTE (direito de imagem):
+- Use FOTOS PRÓPRIAS ou imagens liberadas pelo distribuidor/fabricante.
+- NÃO baixe fotos de marca do Google/sites concorrentes para publicar —
+  é material protegido por direito autoral e marca registrada.
+
+Tamanho ideal da foto: ~600 x 600 px, quadrada, fundo branco, até ~150 KB.
+
+------------------------------------------------------------
+NOME DO ARQUIVO            ->  PRODUTO
+------------------------------------------------------------
+MEDICAMENTOS
+losartana.jpg              ->  Losartana 50mg
+dipirona-gotas.jpg         ->  Dipirona gotas
+loratadina-comp.jpg        ->  Loratadina comprimido
+cimegripe.jpg              ->  Cimegripe
+loratadina-xpe.jpg         ->  Loratadina xarope
+dipirona-1g.jpg            ->  Dipirona 1g
+nistatina.jpg              ->  Pomada Nistatina + Zinco
+naridrin.jpg               ->  Naridrin
+narix.jpg                  ->  Narix (3 unidades)
+neosoro.jpg                ->  Neosoro (3 unidades)
+ambroximel.jpg             ->  Xarope Ambroximel (adulto e infantil)
+expec.jpg                  ->  Expec (xarope expectorante)
+inalador.jpg               ->  Inalador G-Tech Ultrassonico
+
+FRALDAS
+baby-sec.jpg               ->  Fralda Baby Sec
+pompom.jpg                 ->  Fralda Pom Pom
+personal.jpg               ->  Fralda Personal
+personalidade.jpg          ->  Fralda Personalidade
+toquinho.jpg               ->  Fralda Toquinho
+huggies-grande.jpg         ->  Fralda Huggies (azul) - pacote grande
+huggies-pequeno.jpg        ->  Fralda Huggies (azul) - pacote pequeno
+
+MAE & BEBE
+aptamil.jpg                ->  Leite Aptamil
+nan.jpg                    ->  Leite Nan
+nestogeno.jpg              ->  Leite Nestogeno
+ninho-fases.jpg            ->  Leite Ninho Fases
+ninho-integral.jpg         ->  Leite Ninho Integral
+ninho-inst.jpg             ->  Leite Ninho Instantaneo
+mucilon.jpg                ->  Mucilon
+
+BELEZA & TINTAS
+tinta-maxton.jpg           ->  Tinta Maxton
+tinta-corton.jpg           ->  Tinta Cor & Ton
+biocolor.jpg               ->  Tinta Biocolor
+tinta-salonline.jpg        ->  Tinta Salon Line
+tinta-koleston.jpg         ->  Tinta Koleston
+tinta-imedia.jpg           ->  Tinta Imedia
+lake-charming.jpg          ->  Lake Charming
+
+VITAMINAS
+lavitan-az.jpg             ->  Lavitan A-Z

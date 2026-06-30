@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFARMA Drogaria — peça seu remédio pelo WhatsApp com entrega grátis</title>
+    <meta name="description" content="Mande a receita ou o nome do medicamento pelo WhatsApp. A DFARMA confere, faz o orçamento na hora e entrega grátis em Caieiras. Atendemos também Franco da Rocha e Francisco Morato.">
+    <meta name="theme-color" content="#DC2626">
+
+    <!-- Open Graph (compartilhamento) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DFARMA Drogaria — seu remédio sem sair de casa">
+    <meta property="og:description" content="Peça pelo WhatsApp e receba grátis em Caieiras. Atendemos toda a região. Atendimento com farmacêutico.">
+    <meta property="og:image" content="img/4.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            hover: '#B91C1C',
+                        },
+                        secondary: '#1E3A8A',
+                        accent: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="ads.js?v=2"></script>
+</head>
+<body class="font-sans text-gray-800 antialiased pb-20 md:pb-0">
+
+    <!-- ============================ HEADER ENXUTO ============================ -->
+    <header id="main-header" class="fixed w-full top-0 z-50 bg-white shadow-md transition-transform duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center gap-4">
+
+            <!-- Logo: usa img/logo.png; se o arquivo não existir, cai no wordmark de texto -->
+            <a href="#topo" class="flex items-center gap-2 shrink-0" aria-label="DFARMA Drogaria — voltar ao topo">
+                <img src="img/logo.png" alt="DFARMA Drogaria" class="h-10 w-auto"
+                     onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='inline-flex';">
+                <span id="logo-fallback" class="text-2xl font-bold text-secondary tracking-tighter" style="display:none;">
+                    <span class="text-accent">D</span>FARMA
+                </span>
+            </a>
+
+            <!-- Indicador "online" (assinatura: cruz + status aceso) -->
+            <div class="hidden sm:flex items-center gap-2 text-sm text-gray-500 ml-auto mr-2">
+                <span class="online-dot" aria-hidden="true"></span>
+                <span>Atendimento online agora</span>
+            </div>
+
+            <!-- Único CTA do header -->
+            <a href="#" data-wa-cta class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full flex items-center gap-2 transition-colors shadow-lg shrink-0">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Pedir no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- ============================ HERO + FORMULÁRIO ============================ -->
+    <section id="topo" class="relative bg-gray-50 overflow-hidden pt-24 md:pt-28 pb-12 md:pb-20">
+        <!-- Motivo de assinatura: cruz "+" suave ao fundo -->
+        <div class="hidden lg:block absolute -top-10 -right-10 text-primary/5 select-none pointer-events-none" aria-hidden="true">
+            <svg class="w-80 h-80" viewBox="0 0 24 24" fill="currentColor"><path d="M10 2h4v8h8v4h-8v8h-4v-8H2v-4h8z"/></svg>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+                <!-- Coluna texto + prova -->
+                <div class="reveal">
+                    <span class="inline-flex items-center gap-2 bg-primary/10 text-primary font-semibold text-sm px-3 py-1 rounded-full mb-5">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg>
+                        Cuidando de você!
+                    </span>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                        Seu remédio sem sair de casa, com quem cuida de você.
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Mande a receita ou só o nome do medicamento pelo WhatsApp. A gente confere, faz o orçamento na hora e entrega <strong class="text-gray-800">grátis em Caieiras</strong>. Também atendemos Franco da Rocha e Francisco Morato.
+                    </p>
+
+                    <!-- Microcopy de confiança -->
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg>
+                            <span><strong>Entrega grátis</strong> em Caieiras (e rápida na região)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg>
+                            <span>Atendimento com <strong>farmacêutico</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg>
+                            <span><strong>Resposta rápida</strong> — quase sempre na hora</span>
+                        </li>
+                    </ul>
+
+                    <!-- Foto real da loja (apoio visual) -->
+                    <div class="hidden md:block overflow-hidden rounded-2xl shadow-xl max-w-md">
+                        <img src="img/4.jpg" alt="Interior da loja física da DFARMA Drogaria" class="w-full h-56 object-cover">
+                    </div>
+                </div>
+
+                <!-- Coluna do formulário (foco principal) -->
+                <div class="reveal">
+                    <div class="bg-white rounded-2xl shadow-2xl border-t-4 border-primary p-6 sm:p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-1">Faça seu pedido agora</h2>
+                        <p class="text-gray-500 mb-6 text-sm">Preencha e o WhatsApp abre com tudo pronto pra enviar.</p>
+
+                        <form id="lead-form" novalidate>
+                            <!-- Honeypot anti-spam: invisível para humanos, atrai bots -->
+                            <div class="hidden" aria-hidden="true">
+                                <label for="empresa">Deixe este campo em branco</label>
+                                <input type="text" id="empresa" name="empresa" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="nome" class="block text-sm font-semibold text-gray-700 mb-1">Nome <span class="text-primary" aria-hidden="true">*</span></label>
+                                <input type="text" id="nome" name="nome" required autocomplete="name"
+                                       placeholder="Como podemos te chamar?"
+                                       class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-secondary focus:ring-2 focus:ring-secondary/30 outline-none transition">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="telefone" class="block text-sm font-semibold text-gray-700 mb-1">WhatsApp</label>
+                                <input type="tel" id="telefone" name="telefone" inputmode="numeric" autocomplete="tel"
+                                       placeholder="(11) 9XXXX-XXXX" maxlength="16"
+                                       class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-secondary focus:ring-2 focus:ring-secondary/30 outline-none transition">
+                            </div>
+
+                            <div class="mb-5">
+                                <label for="necessidade" class="block text-sm font-semibold text-gray-700 mb-1">Do que você precisa? <span class="text-gray-400 font-normal">(opcional)</span></label>
+                                <textarea id="necessidade" name="necessidade" rows="3"
+                                          placeholder="Ex.: Losartana 50mg, fralda tamanho M, ou “tenho a foto da receita”"
+                                          class="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-secondary focus:ring-2 focus:ring-secondary/30 outline-none transition resize-none"></textarea>
+                            </div>
+
+                            <p id="form-error" class="text-primary text-sm mb-3 hidden" role="alert"></p>
+
+                            <button type="submit"
+                                    class="w-full bg-green-500 hover:bg-green-600 text-white text-lg font-semibold py-3.5 px-6 rounded-full flex items-center justify-center gap-2 transition-colors shadow-lg">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                Pedir no WhatsApp
+                            </button>
+
+                            <p class="text-center text-xs text-gray-400 mt-3">
+                                Sem cadastro. O botão abre direto a conversa no WhatsApp.
+                            </p>
+
+                            <noscript>
+                                <p class="text-center text-sm text-primary mt-3">
+                                    Ative o JavaScript ou use o botão verde no topo para falar conosco no WhatsApp.
+                                </p>
+                            </noscript>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FAIXA DE CONFIANÇA ============================ -->
+    <section class="bg-secondary text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="reveal">
+                    <div class="text-accent text-2xl font-bold mb-1">Grátis e rápido</div>
+                    <p class="text-sm text-gray-200">Grátis em Caieiras · atendemos também Franco da Rocha e Francisco Morato</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-accent text-2xl font-bold mb-1">Farmacêutico</div>
+                    <p class="text-sm text-gray-200">Atendimento humano, com orientação de quem entende</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-accent text-2xl font-bold mb-1">Você escolhe</div>
+                    <p class="text-sm text-gray-200">Genérico, similar ou de marca — do seu jeito</p>
+                </div>
+                <div class="reveal">
+                    <div class="text-accent text-2xl font-bold mb-1">Uso contínuo</div>
+                    <p class="text-sm text-gray-200">A gente lembra você de repor o que não pode faltar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ COMO FUNCIONA ============================ -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12 reveal">Pedir é simples assim</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+                <div class="relative bg-gray-50 rounded-xl p-8 reveal">
+                    <span class="text-5xl font-bold text-primary/20">01</span>
+                    <h3 class="text-xl font-bold mt-2 mb-2">Mande pelo WhatsApp</h3>
+                    <p class="text-gray-600">Envie a foto da receita ou só o nome do medicamento. Vale também fralda, perfumaria e higiene.</p>
+                </div>
+
+                <div class="relative bg-gray-50 rounded-xl p-8 reveal">
+                    <span class="text-5xl font-bold text-primary/20">02</span>
+                    <h3 class="text-xl font-bold mt-2 mb-2">Receba o orçamento na hora</h3>
+                    <p class="text-gray-600">Conferimos disponibilidade e te passamos o preço na hora, com a opção que couber no seu bolso.</p>
+                </div>
+
+                <div class="relative bg-gray-50 rounded-xl p-8 reveal">
+                    <span class="text-5xl font-bold text-primary/20">03</span>
+                    <h3 class="text-xl font-bold mt-2 mb-2">Receba em casa</h3>
+                    <p class="text-gray-600">Confirmou? A gente entrega rapidinho na sua porta — frete grátis em Caieiras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ PRODUTOS E SERVIÇOS ============================ -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12 reveal">Tudo que você precisa, em um só lugar</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div class="bg-white p-7 rounded-xl shadow-lg text-center border-t-4 border-primary reveal">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><path fill="none" d="M0 0H24V24H0z"/><path d="M19 2v2h-2v3c1.657 0 3 1.343 3 3v11c0 .552-.448 1-1 1H5c-.552 0-1-.448-1-1V10c0-1.657 1.343-3 3-3V4H5V2h14zm-2 7H7c-.552 0-1 .448-1 1v10h12V10c0-.552-.448-1-1-1zm-4 2v2h2v2h-2.001L13 17h-2l-.001-2H9v-2h2v-2h2zm2-7H9v3h6V4z"/></g></svg>
+                    <h3 class="text-lg font-bold mb-2">Medicamentos</h3>
+                    <p class="text-gray-600 text-sm">De referência, genéricos e similares para a família toda.</p>
+                </div>
+
+                <div class="bg-white p-7 rounded-xl shadow-lg text-center border-t-4 border-secondary reveal">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 442 442" aria-hidden="true"><g><path d="M231.5,50.5c0-5.79-4.71-10.5-10.5-10.5c-5.79,0-10.5,4.71-10.5,10.5S215.21,61,221,61C226.79,61,231.5,56.29,231.5,50.5z"/><path d="M346,163.682h-60V122c0-5.522-4.478-10-10-10h-10V10c0-5.523-4.478-10-10-10h-70c-5.523,0-10,4.477-10,10v102h-10 c-5.523,0-10,4.478-10,10v41.682H96c-11.028,0-20,8.972-20,20V422c0,11.028,8.972,20,20,20h250c11.028,0,20-8.972,20-20V183.682 C366,172.653,357.028,163.682,346,163.682z M196,20h50v92h-50V20z M96,422V183.682h70c5.523,0,10-4.477,10-10V132h35v71.682h-85 c-5.523,0-10,4.478-10,10V392c0,5.522,4.477,10,10,10h190c5.522,0,10-4.478,10-10v-60.892c0-5.522-4.478-10-10-10s-10,4.478-10,10 V382H136V223.682h75V352c0,5.522,4.477,10,10,10c5.523,0,10-4.478,10-10V223.682h75V297c0,5.522,4.478,10,10,10s10-4.478,10-10 v-83.318c0-5.522-4.478-10-10-10h-85V132h35v41.682c0,5.523,4.478,10,10,10h70L346.002,422H96z"/></g></svg>
+                    <h3 class="text-lg font-bold mb-2">Perfumaria e beleza</h3>
+                    <p class="text-gray-600 text-sm">Cosméticos e cuidados pessoais das marcas que você confia.</p>
+                </div>
+
+                <div class="bg-white p-7 rounded-xl shadow-lg text-center border-t-4 border-accent reveal">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M19 2C19 2 21 3.2 21 6C21 8.8 19 10 19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M17 4C17 4 18 4.6 18 6C18 7.4 17 8 17 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M17.9975 18C18 17.8358 18 17.669 18 17.5C18 15.0147 14.4183 13 10 13C5.58172 13 2 15.0147 2 17.5C2 19.9853 2 22 10 22C12.231 22 13.8398 21.8433 15 21.5634" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="text-lg font-bold mb-2">Fraldas e higiene</h3>
+                    <p class="text-gray-600 text-sm">Para bebês e adultos, em todos os tamanhos, sempre à mão.</p>
+                </div>
+
+                <div class="bg-white p-7 rounded-xl shadow-lg text-center border-t-4 border-primary reveal">
+                    <svg class="w-12 h-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+                    </svg>
+                    <h3 class="text-lg font-bold mb-2">Cuidado pessoal</h3>
+                    <p class="text-gray-600 text-sm">Itens do dia a dia para o bem-estar de quem você ama.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ A LOJA (PROVA SOCIAL) ============================ -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-3 reveal">Uma loja de verdade, pertinho de você</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto reveal">Não somos só uma tela: tem gente, balcão e farmacêutico esperando por você na Vera Tereza, em Caieiras.</p>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md h-44 sm:h-56 reveal">
+                    <img src="img/1.jpg" alt="Fachada da DFARMA Drogaria" loading="lazy" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md h-44 sm:h-56 reveal">
+                    <img src="img/2.jpg" alt="Interior da loja com prateleiras de produtos" loading="lazy" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md h-44 sm:h-56 reveal">
+                    <img src="img/3.jpg" alt="Entrada da DFARMA Drogaria" loading="lazy" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md h-44 sm:h-56 reveal">
+                    <img src="img/5.jpg" alt="Prateleiras com medicamentos e produtos de higiene" loading="lazy" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12 reveal">Perguntas frequentes</h2>
+            <div class="space-y-4">
+
+                <details class="group bg-white rounded-xl shadow-sm p-5 reveal">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-800 list-none">
+                        Vocês entregam na minha região?
+                        <span class="text-primary text-2xl leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">A entrega é grátis em Caieiras. Também atendemos Franco da Rocha e Francisco Morato — manda o endereço no WhatsApp que a gente confirma as condições rapidinho.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl shadow-sm p-5 reveal">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-800 list-none">
+                        Preciso de receita?
+                        <span class="text-primary text-2xl leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Depende do medicamento. Muitos itens não exigem receita; outros, por lei, sim. Mande a foto da receita ou o nome do remédio pelo WhatsApp e o farmacêutico te orienta sobre o que é necessário.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl shadow-sm p-5 reveal">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-800 list-none">
+                        Quais as formas de pagamento?
+                        <span class="text-primary text-2xl leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Aceitamos as principais formas: Pix, cartão de débito e crédito e dinheiro na entrega. Combine o que for melhor pra você direto na conversa.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl shadow-sm p-5 reveal">
+                    <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-800 list-none">
+                        Tem o medicamento de marca que eu uso?
+                        <span class="text-primary text-2xl leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Trabalhamos com medicamentos de referência, genéricos e similares. Manda o nome que conferimos a disponibilidade na hora — e, se quiser, te mostramos opções mais econômicas.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ CTA FINAL ============================ -->
+    <section class="py-16 md:py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center reveal">
+            <svg class="w-10 h-10 mx-auto mb-4 text-white/80" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Vamos cuidar de você agora?</h2>
+            <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">É só mandar uma mensagem. A gente confere, faz o orçamento e leva até a sua porta.</p>
+            <a href="#" data-wa-cta class="inline-flex items-center gap-2 bg-white text-primary text-lg font-bold py-4 px-10 rounded-full transition-transform transform hover:scale-105 shadow-xl">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                Pedir no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="bg-gray-900 text-gray-300 pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+
+                <div>
+                    <div class="text-2xl font-bold text-white mb-3"><span class="text-accent">D</span>FARMA</div>
+                    <p class="text-sm text-gray-400">Cuidando de você! Drogaria de bairro com entrega grátis em Caieiras. Atendemos também Franco da Rocha e Francisco Morato.</p>
+                </div>
+
+                <div class="text-sm space-y-2">
+                    <p class="text-white font-semibold mb-2">Contato</p>
+                    <p>Av. Vereador Alfredo Casarotto, 195<br>Vera Tereza — Caieiras / SP — CEP 07.717-395</p>
+                    <p>Telefones: (11) 94272-4668 · (11) 5361-4512</p>
+                    <p>E-mail: drogafarma391@gmail.com</p>
+                    <!-- PLACEHOLDER: confirmar e substituir o horário real -->
+                    <p>Horário de funcionamento: <span class="text-gray-500">[a confirmar]</span></p>
+                </div>
+
+                <div class="text-sm space-y-2">
+                    <p class="text-white font-semibold mb-2">Dados da empresa</p>
+                    <p>DFARMA LTDA</p>
+                    <p>CNPJ: 20.083.792/0001-12</p>
+                    <!-- PLACEHOLDER: confirmar nome e CRF-SP do farmacêutico responsável -->
+                    <p>Farmacêutico(a) responsável: <span class="text-gray-500">[Nome do farmacêutico]</span></p>
+                    <p>CRF-SP nº <span class="text-gray-500">[000000]</span></p>
+                </div>
+            </div>
+
+            <!-- Avisos legais / Anvisa -->
+            <div class="border-t border-gray-800 pt-6 text-xs text-gray-500 space-y-2 leading-relaxed">
+                <p>SE PERSISTIREM OS SINTOMAS, O MÉDICO DEVERÁ SER CONSULTADO.</p>
+                <p>Medicamentos podem causar efeitos indesejados. Evite a automedicação: informe-se com o farmacêutico.</p>
+                <p>A venda de medicamentos sujeitos a prescrição só é realizada mediante apresentação e, quando exigido, retenção da receita, conforme a legislação vigente.</p>
+                <p class="pt-2">&copy; 2025 DFARMA LTDA. Todos os direitos reservados. ·
+                    <button id="privacy-btn" class="underline hover:text-white transition-colors">Política de Privacidade</button>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================ BARRA FIXA MOBILE ============================ -->
+    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.08)]">
+        <a href="#" data-wa-cta class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-full flex items-center justify-center gap-2 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Pedir no WhatsApp
+        </a>
+    </div>
+
+    <!-- ============================ MODAL DE PRIVACIDADE (reaproveitado) ============================ -->
+    <div id="privacy-modal" class="fixed inset-0 z-[60] bg-black bg-opacity-70 hidden items-center justify-center p-4">
+        <div class="bg-white text-gray-800 rounded-xl shadow-2xl max-w-lg w-full p-8 relative overflow-y-auto max-h-[90vh]">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold" aria-label="Fechar">&times;</button>
+            <h3 class="text-2xl font-bold mb-4">Política de Privacidade</h3>
+            <p class="mb-4 text-sm text-gray-600">
+                Esta Política de Privacidade descreve como a DFARMA coleta, usa e protege as informações que você fornece ao utilizar esta página.
+            </p>
+            <p class="mb-4 text-sm text-gray-600">
+                <strong>Coleta de Dados:</strong> os dados que você digita no formulário (nome, WhatsApp e descrição da necessidade) são usados apenas para montar a mensagem enviada por você ao nosso WhatsApp, com a finalidade de atendimento. Esta página, por si só, não armazena esses dados em servidores.
+            </p>
+            <p class="mb-4 text-sm text-gray-600">
+                <strong>Cookies:</strong> podemos utilizar cookies básicos para garantir o funcionamento técnico da página e melhorar a experiência do usuário.
+            </p>
+            <p class="text-sm text-gray-600">
+                Para mais informações, entre em contato pelos nossos canais oficiais.
+            </p>
+        </div>
+    </div>
+
+    <script src="captura.js?v=2"></script>
+</body>
+</html>

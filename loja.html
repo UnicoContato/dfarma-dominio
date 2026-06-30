@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFARMA Drogaria — Loja online com entrega grátis</title>
+    <meta name="description" content="Compre medicamentos, fraldas, perfumaria e higiene na DFARMA. Monte sua cesta e finalize pelo WhatsApp com entrega grátis em Caieiras, Franco da Rocha e Francisco Morato.">
+    <meta name="theme-color" content="#DC2626">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#DC2626',
+                            hover: '#B91C1C',
+                        },
+                        secondary: '#1E3A8A',
+                        accent: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="ads.js?v=2"></script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- ============================ BARRA DE AVISO ============================ -->
+    <div class="bg-secondary text-white text-xs sm:text-sm">
+        <div class="container mx-auto px-4 py-2 flex items-center justify-center gap-2 text-center">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V5a1 1 0 00-1-1H3m10 4h4l3 4v4h-2"/></svg>
+            <span>Entrega <strong>grátis</strong> em Caieiras · atendemos toda a região</span>
+        </div>
+    </div>
+
+    <!-- ============================ HEADER ============================ -->
+    <header id="main-header" class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center gap-3 md:gap-6">
+
+                <!-- Logo (usa img/logo.png; cai no wordmark se faltar) -->
+                <a href="#topo" class="flex items-center gap-2 shrink-0" aria-label="DFARMA Drogaria — início">
+                    <img src="img/logo.png" alt="DFARMA Drogaria" class="h-9 md:h-10 w-auto"
+                         onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='inline-flex';">
+                    <span id="logo-fallback" class="text-xl md:text-2xl font-bold text-secondary tracking-tighter" style="display:none;">
+                        <span class="text-accent">D</span>FARMA
+                    </span>
+                </a>
+
+                <!-- Busca (desktop) -->
+                <div class="hidden md:flex flex-1 items-center bg-gray-100 rounded-full px-4 py-2.5 focus-within:ring-2 focus-within:ring-secondary/30">
+                    <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
+                    <input type="search" id="search" placeholder="Buscar medicamento, fralda, marca..." aria-label="Buscar produtos"
+                           class="bg-transparent outline-none px-3 w-full text-gray-800 placeholder-gray-400">
+                </div>
+
+                <!-- Ações -->
+                <div class="flex items-center gap-2 md:gap-3 ml-auto md:ml-0 shrink-0">
+                    <a href="#" data-wa-cta class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 md:px-4 py-2 rounded-full transition-colors shadow">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        <span class="hidden lg:inline">WhatsApp</span>
+                    </a>
+
+                    <button id="cart-btn" class="relative flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-3 md:px-4 py-2 rounded-full transition-colors shadow" aria-label="Abrir cesta">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        <span class="hidden md:inline">Cesta</span>
+                        <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-accent text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Busca (mobile) -->
+            <div class="md:hidden mt-3 flex items-center bg-gray-100 rounded-full px-4 py-2.5">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
+                <input type="search" id="search-mobile" placeholder="Buscar produto..." aria-label="Buscar produtos"
+                       class="bg-transparent outline-none px-3 w-full text-gray-800 placeholder-gray-400">
+            </div>
+        </div>
+
+        <!-- Categorias -->
+        <nav class="border-t border-gray-100 bg-white" aria-label="Categorias">
+            <div class="container mx-auto px-4">
+                <div id="cat-bar" class="flex gap-2 overflow-x-auto no-scrollbar py-3">
+                    <button data-cat="todos" class="cat-chip is-active whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium border transition-colors">Todos</button>
+                    <button data-cat="medicamentos" class="cat-chip whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium border transition-colors">Medicamentos</button>
+                    <button data-cat="fraldas" class="cat-chip whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium border transition-colors">Fraldas</button>
+                    <button data-cat="infantil" class="cat-chip whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium border transition-colors">Mãe &amp; Bebê</button>
+                    <button data-cat="beleza" class="cat-chip whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium border transition-colors">Beleza &amp; Tintas</button>
+                    <button data-cat="vitaminas" class="cat-chip whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium border transition-colors">Vitaminas</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="topo">
+
+        <!-- ============================ BANNERS (carrossel) ============================ -->
+        <section class="container mx-auto px-4 pt-6" aria-label="Destaques">
+            <div id="banner-track" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar rounded-2xl"></div>
+            <div id="banner-dots" class="flex justify-center gap-2 mt-3"></div>
+        </section>
+
+        <!-- ============================ OFERTA + BENEFÍCIOS ============================ -->
+        <section id="beneficios" class="container mx-auto px-4 pt-8 scroll-mt-40">
+            <div class="grid md:grid-cols-3 gap-4">
+
+                <!-- Card relâmpago -->
+                <div class="bg-[#FEF3C7] rounded-2xl overflow-hidden reveal">
+                    <div class="bg-primary h-1.5"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-primary font-bold mb-1">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+                            Oferta da semana
+                        </div>
+                        <p class="text-amber-800 text-sm mb-4">Preços especiais — aproveite!</p>
+                        <div class="flex gap-2 mb-4" aria-label="Tempo restante da oferta">
+                            <span id="cd-h" class="bg-primary text-white text-lg font-bold px-3 py-1.5 rounded-lg tabular-nums">00h</span>
+                            <span id="cd-m" class="bg-primary text-white text-lg font-bold px-3 py-1.5 rounded-lg tabular-nums">00m</span>
+                            <span id="cd-s" class="bg-primary text-white text-lg font-bold px-3 py-1.5 rounded-lg tabular-nums">00s</span>
+                        </div>
+                        <a href="#produtos" class="text-primary font-semibold text-sm underline">Ver ofertas →</a>
+                    </div>
+                </div>
+
+                <!-- Benefício: Bolsa Família -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <!-- Para usar o selo oficial, salve em img/bolsa-familia.png (ver direitos de uso) -->
+                        <img src="img/bolsa-familia.png" alt="Bolsa Família" class="h-8 w-auto" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+                        <span style="display:none" class="text-xs font-bold text-secondary bg-blue-50 px-2 py-1 rounded items-center">Bolsa Família</span>
+                        <span class="ml-auto bg-green-600 text-white text-sm font-bold px-3 py-1 rounded-full">5% OFF</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-1">Desconto Bolsa Família</h3>
+                    <p class="text-sm text-gray-600">5% de desconto para quem recebe o Bolsa Família. É só avisar no atendimento e apresentar o comprovante.</p>
+                </div>
+
+                <!-- Benefício: famílias atípicas -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-9 h-9 rounded-full bg-[#FCEBEB] text-primary flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.7-4.35-9.33-8.07C.9 10.27 1.36 6.9 4 5.36 6 4.2 8.26 4.7 9.6 6.3L12 9l2.4-2.7c1.34-1.6 3.6-2.1 5.6-.94 2.64 1.54 3.1 4.91 1.33 7.57C18.7 16.65 12 21 12 21z"/></svg>
+                        </span>
+                        <span class="ml-auto bg-green-600 text-white text-sm font-bold px-3 py-1 rounded-full">5% OFF</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-1">Desconto famílias atípicas</h3>
+                    <p class="text-sm text-gray-600">5% para famílias atípicas no uso contínuo de medicamentos. Fale com a gente para ativar o benefício.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ ATALHOS DE CATEGORIA ============================ -->
+        <section class="container mx-auto px-4 pt-8">
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-3" id="quicklinks"></div>
+        </section>
+
+        <!-- ============================ PRODUTOS ============================ -->
+        <section id="produtos" class="container mx-auto px-4 py-10 scroll-mt-40">
+            <div class="flex items-baseline justify-between mb-6">
+                <h2 id="grid-title" class="text-2xl font-bold text-gray-900">Mais vendidos</h2>
+                <span id="grid-count" class="text-sm text-gray-500"></span>
+            </div>
+
+            <div id="produtos-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"></div>
+
+            <p id="empty-state" class="hidden text-center text-gray-500 py-16">Nenhum produto encontrado. Tente outra busca ou peça direto no WhatsApp.</p>
+        </section>
+
+        <!-- ============================ FAIXA DE CONFIANÇA ============================ -->
+        <section class="bg-secondary text-white py-10">
+            <div class="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="reveal"><div class="text-accent text-xl font-bold mb-1">Entrega grátis</div><p class="text-sm text-gray-200">Em Caieiras</p></div>
+                <div class="reveal"><div class="text-accent text-xl font-bold mb-1">Farmacêutico</div><p class="text-sm text-gray-200">Atendimento humano</p></div>
+                <div class="reveal"><div class="text-accent text-xl font-bold mb-1">Pix, cartão e dinheiro</div><p class="text-sm text-gray-200">Pague na entrega</p></div>
+                <div class="reveal"><div class="text-accent text-xl font-bold mb-1">Resposta rápida</div><p class="text-sm text-gray-200">Quase sempre na hora</p></div>
+            </div>
+        </section>
+
+        <!-- ============================ DEPOIMENTOS ============================ -->
+        <section class="container mx-auto px-4 py-12">
+            <div class="text-center mb-8 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">O que dizem nossos clientes</h2>
+                <p class="text-gray-500 text-sm mt-2"><span class="text-accent font-bold">4,8 ★</span> · 26 avaliações reais no Google</p>
+            </div>
+            <div id="depoimentos-grid" class="grid md:grid-cols-3 gap-4"></div>
+            <div class="text-center mt-8 reveal">
+                <a href="https://www.google.com/maps/place/DFARMA+CAIEIRAS/data=!4m2!3m1!1s0x0:0x6068466b3b04d0c6" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white border border-gray-200 hover:border-primary text-gray-700 hover:text-primary font-semibold px-6 py-3 rounded-full transition-colors">
+                    Ver todas as avaliações no Google
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================ COMO CHEGAR ============================ -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8 reveal">Como chegar até a farmácia</h2>
+                <div class="grid lg:grid-cols-2 gap-6 items-stretch">
+
+                    <div class="reveal">
+                        <div class="bg-gray-50 rounded-2xl p-6 md:p-8 h-full flex flex-col">
+                            <div class="flex items-start gap-3 mb-4">
+                                <svg class="w-6 h-6 text-primary shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                                <div>
+                                    <p class="font-bold text-gray-900">DFARMA Drogaria</p>
+                                    <p class="text-gray-600">Av. Vereador Alfredo Casarotto, 195<br>Vera Tereza — Caieiras / SP — CEP 07.717-395</p>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-600 space-y-1 mb-6">
+                                <p>Telefones: (11) 94272-4668 · (11) 5361-4512</p>
+                                <p>Horário: fecha às 22h <span class="text-gray-400">(confirme dias e abertura)</span></p>
+                            </div>
+                            <div class="mt-auto flex flex-col sm:flex-row gap-3">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Vereador+Alfredo+Casarotto,+195+-+Vera+Tereza,+Caieiras+-+SP" target="_blank" rel="noopener" class="flex-1 bg-primary hover:bg-primary-hover text-white font-semibold px-5 py-3 rounded-full flex items-center justify-center gap-2 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                                    Traçar rota
+                                </a>
+                                <a href="https://www.google.com/maps/place/DFARMA+CAIEIRAS/data=!4m2!3m1!1s0x0:0x6068466b3b04d0c6" target="_blank" rel="noopener" class="flex-1 bg-white border border-gray-200 hover:border-primary text-gray-700 hover:text-primary font-semibold px-5 py-3 rounded-full flex items-center justify-center gap-2 transition-colors">
+                                    Ver no Google
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal rounded-2xl overflow-hidden border border-gray-100 min-h-[320px]">
+                        <iframe title="Mapa da DFARMA Drogaria"
+                            src="https://maps.google.com/maps?q=Av+Vereador+Alfredo+Casarotto+195+Caieiras&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                            class="w-full h-full min-h-[320px] border-0" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="bg-gray-900 text-gray-300 pt-12 pb-24 md:pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold text-white mb-3"><span class="text-accent">D</span>FARMA</div>
+                    <p class="text-sm text-gray-400">Cuidando de você! Drogaria de bairro com entrega grátis em Caieiras, Franco da Rocha e Francisco Morato.</p>
+                </div>
+                <div class="text-sm space-y-2">
+                    <p class="text-white font-semibold mb-2">Contato</p>
+                    <p>Av. Vereador Alfredo Casarotto, 195<br>Vera Tereza — Caieiras / SP — CEP 07.717-395</p>
+                    <p>Telefones: (11) 94272-4668 · (11) 5361-4512</p>
+                    <p>E-mail: drogafarma391@gmail.com</p>
+                    <p>Horário de funcionamento: <span class="text-gray-500">[a confirmar]</span></p>
+                </div>
+                <div class="text-sm space-y-2">
+                    <p class="text-white font-semibold mb-2">Dados da empresa</p>
+                    <p>DFARMA LTDA</p>
+                    <p>CNPJ: 20.083.792/0001-12</p>
+                    <p>Farmacêutico(a) responsável: <span class="text-gray-500">[Nome do farmacêutico]</span></p>
+                    <p>CRF-SP nº <span class="text-gray-500">[000000]</span></p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-xs text-gray-500 space-y-2 leading-relaxed">
+                <p>SE PERSISTIREM OS SINTOMAS, O MÉDICO DEVERÁ SER CONSULTADO.</p>
+                <p>Medicamentos podem causar efeitos indesejados. Evite a automedicação: informe-se com o farmacêutico.</p>
+                <p>A venda de medicamentos sujeitos a prescrição só é realizada mediante apresentação e, quando exigido, retenção da receita, conforme a legislação vigente.</p>
+                <p>Os preços e a disponibilidade são confirmados no atendimento via WhatsApp. Imagens meramente ilustrativas.</p>
+                <p class="pt-2">&copy; 2025 DFARMA LTDA. Todos os direitos reservados. ·
+                    <button id="privacy-btn" class="underline hover:text-white transition-colors">Política de Privacidade</button>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================ BARRA FIXA MOBILE (cesta) ============================ -->
+    <div id="cart-bar" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] hidden">
+        <button id="cart-bar-btn" class="w-full bg-primary hover:bg-primary-hover text-white font-semibold py-3 rounded-full flex items-center justify-center gap-3 transition-colors">
+            <span>Ver cesta (<span id="cart-bar-count">0</span>)</span>
+            <span class="opacity-80">·</span>
+            <span id="cart-bar-total">R$ 0,00</span>
+        </button>
+    </div>
+
+    <!-- ============================ DRAWER DA CESTA ============================ -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-[70] hidden"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[80] shadow-2xl translate-x-full transition-transform duration-300 flex flex-col" aria-label="Sua cesta" aria-hidden="true">
+        <div class="flex items-center justify-between p-4 border-b border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900">Sua cesta</h2>
+            <button id="cart-close" class="text-gray-500 hover:text-primary text-2xl leading-none" aria-label="Fechar cesta">&times;</button>
+        </div>
+
+        <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-4">
+            <!-- itens renderizados via JS -->
+        </div>
+
+        <p id="cart-empty" class="px-4 py-12 text-center text-gray-500">Sua cesta está vazia.<br>Adicione produtos para começar.</p>
+
+        <div id="cart-footer" class="border-t border-gray-100 p-4 hidden">
+            <label class="flex items-start gap-2 mb-3 cursor-pointer">
+                <input type="checkbox" id="cart-desconto" class="mt-0.5 accent-primary w-4 h-4 shrink-0">
+                <span class="text-sm text-gray-600">Tenho <strong>5% de desconto</strong> (Bolsa Família ou família atípica)</span>
+            </label>
+            <div class="flex items-center justify-between text-sm mb-1">
+                <span class="text-gray-600">Subtotal</span>
+                <span id="cart-subtotal" class="text-gray-800">R$ 0,00</span>
+            </div>
+            <div id="cart-discount-row" class="flex items-center justify-between text-sm mb-1 text-green-700 hidden">
+                <span>Desconto 5%</span>
+                <span id="cart-discount">- R$ 0,00</span>
+            </div>
+            <div class="flex items-center justify-between mb-1">
+                <span class="text-gray-800 font-semibold">Total</span>
+                <span id="cart-total" class="text-xl font-bold text-gray-900">R$ 0,00</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-4">Frete grátis em Caieiras · pagamento na entrega. O desconto de 5% é confirmado no atendimento.</p>
+            <button id="cart-checkout" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3.5 rounded-full flex items-center justify-center gap-2 transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                Finalizar no WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <!-- ============================ MODAL DE PRIVACIDADE ============================ -->
+    <div id="privacy-modal" class="fixed inset-0 z-[90] bg-black bg-opacity-70 hidden items-center justify-center p-4">
+        <div class="bg-white text-gray-800 rounded-xl shadow-2xl max-w-lg w-full p-8 relative overflow-y-auto max-h-[90vh]">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold" aria-label="Fechar">&times;</button>
+            <h3 class="text-2xl font-bold mb-4">Política de Privacidade</h3>
+            <p class="mb-4 text-sm text-gray-600">Esta Política de Privacidade descreve como a DFARMA coleta, usa e protege as informações que você fornece ao utilizar esta loja.</p>
+            <p class="mb-4 text-sm text-gray-600"><strong>Coleta de Dados:</strong> os itens da cesta são usados apenas para montar a mensagem que você envia ao nosso WhatsApp, com a finalidade de atendimento. Esta página, por si só, não armazena esses dados em servidores.</p>
+            <p class="mb-4 text-sm text-gray-600"><strong>Cookies:</strong> podemos utilizar cookies básicos para garantir o funcionamento técnico da página.</p>
+            <p class="text-sm text-gray-600">Para mais informações, entre em contato pelos nossos canais oficiais.</p>
+        </div>
+    </div>
+
+    <script src="loja.js?v=14"></script>
+</body>
+</html>

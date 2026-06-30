@@ -25,3 +25,87 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ============================================================
+   Adições da landing de captura (captura.html) — isoladas,
+   não alteram o comportamento do site institucional.
+   ============================================================ */
+
+/* Foco visível para navegação por teclado (acessibilidade) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #1E3A8A;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Indicador "online" pulsante (assinatura: atendimento aceso) */
+.online-dot {
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 9999px;
+    background-color: #22c55e;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    animation: online-pulse 2s infinite;
+}
+
+@keyframes online-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    70%  { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Remove a setinha padrão do <details> no FAQ (usamos o "+" da marca) */
+details > summary::-webkit-details-marker { display: none; }
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .online-dot { animation: none; }
+
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* ============================================================
+   Adições da loja (loja.html) — isoladas.
+   ============================================================ */
+
+/* Chips de categoria */
+.cat-chip {
+    border-color: #E5E7EB;
+    color: #374151;
+    background: #fff;
+}
+.cat-chip:hover {
+    border-color: #DC2626;
+    color: #DC2626;
+}
+.cat-chip.is-active {
+    background: #DC2626;
+    border-color: #DC2626;
+    color: #fff;
+}
+
+/* Esconde a barra de rolagem horizontal das categorias */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
