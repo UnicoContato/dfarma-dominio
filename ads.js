@@ -19,7 +19,7 @@
 (function () {
   // ====== COLE SEUS CÓDIGOS AQUI ======
   var GOOGLE_ADS_ID      = 'AW-18269119731';
-  var CONVERSAO_WHATSAPP = 'AW-18269119731/XXXXXXXX'; // ← troque XXXXXXXX pelo RÓTULO da conversão "Contato"
+  var CONVERSAO_WHATSAPP = 'AW-18269119731/xJgyCM_WuMgcEPPJsodE'; // conversão "Chamada WhatsApp"
   var GA4_ID             = ''; // opcional: 'G-XXXXXXXXXX'
   // =====================================
 
@@ -45,7 +45,7 @@
   function conversaoWhatsApp() {
     if (!adsOk || typeof window.gtag !== 'function') return;
     if (CONVERSAO_WHATSAPP.indexOf('/') === -1 || CONVERSAO_WHATSAPP.indexOf('XXXX') !== -1) return;
-    window.gtag('event', 'conversion', { send_to: CONVERSAO_WHATSAPP });
+    window.gtag('event', 'conversion', { send_to: CONVERSAO_WHATSAPP, value: 1.0, currency: 'BRL' });
   }
   // Disponível para uso manual, se precisar.
   window.dfarmaConversao = conversaoWhatsApp;
